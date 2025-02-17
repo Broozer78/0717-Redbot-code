@@ -1,13 +1,31 @@
-
-#include <RedBot.h> 
+#include <RedBot.h>
 
 RedBotMotors motors; 
-RedBotBumper bumper = RedBotBumper(3);
-int bumpState;
-int bumpTime = 0;
 
 void setup()
 {
+  //third motor
+  //pin setup
+  pinMode(11, OUTPUT);
+  pinMode(10, OUTPUT);
+
+  //up
+  digitalWrite(11, LOW);
+  digitalWrite(10, HIGH);
+  delay(500);
+
+  digitalWrite(11, HIGH);
+  digitalWrite(10, HIGH);
+  
+  //down
+  digitalWrite(11, HIGH);
+  digitalWrite(10, LOW);
+  delay(300);
+  
+  digitalWrite(11,LOW);
+  digitalWrite(10,LOW);
+
+  //main program
   motors.drive(150);
   delay(2500);
   motors.brake();
@@ -35,6 +53,7 @@ void setup()
   motors.drive(150);
   delay(750);
   motors.brake();
+  
 }
 
 void loop()
