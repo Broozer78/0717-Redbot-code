@@ -9,38 +9,37 @@ int bumpTime = 0;
 void setup()
 {
   motors.drive(150);
-
-  while (bumpTime < 3){
+  delay(2500);
+  motors.brake();
+  motors.pivot(150, 375);
   motors.drive(150);
-  bumpState = bumper.read();
-
-  if (bumpState == LOW){
-    if(bumpTime == 0){
-      reverse();
-      motors.pivot(150, 400);
-    }
-    if (bumpTime > 0){
-      reverse();
-      motors.pivot(-150, 400);
-    }
-    bumpTime++;
-  }
-  }
-
+  delay(1700);
+  motors.brake();
+  motors.pivot(150, 375);
+  motors.drive(150);
+  delay(2200);
+  motors.brake();
+  motors.pivot(-150, 375);
+  motors.drive(150);
+  delay(1000);
+  motors.brake();
+  motors.pivot(-150, 375);
+  motors.drive(150);
+  delay(750);
+  motors.brake();
+  delay(30);
+  motors.drive(225);
+  delay(7500);
+  motors.brake();
+  motors.pivot(150, 375);
+  motors.drive(150);
+  delay(750);
   motors.brake();
 }
 
 void loop()
 {
   
-}
-
-void reverse()
-{
-  motors.drive(-150);
-  delay(500);
-  motors.brake();
-  delay(100);  
 }
 
 
