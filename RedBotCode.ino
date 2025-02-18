@@ -16,22 +16,25 @@ void setup()
   motors.brake();
   motors.pivot(150, 375);
   motors.drive(150);
-  delay(2500);
+  delay(2100);
   motors.brake();
-  motors.drive(-100);
-  delay(500);
-  motors.brake();
-  motors.pivot(150, 750);
+  motors.pivot(150, 475);
   motors.drive(150);
-  delay(2750);
+  delay(2350);
   motors.brake();
-  motors.pivot(-150, 375);
+  motors.pivot(-150, 450);
   motors.drive(150);
   delay(1000);
   motors.brake();
   motors.pivot(-150, 375);
+ // motors.drive(150);
+  //delay(1000);
+  //motors.brake();
+  //motors.pivot(-150, 400);
+
+
   motors.drive(255);
-  delay(7500);
+  delay(6000);
   motors.brake();
   motors.pivot(150, 375);
   motors.drive(150);
