@@ -66,7 +66,7 @@ void up()
 {
   digitalWrite(11, LOW);
   digitalWrite(10, HIGH);
-  delay(500);
+  delay(450);
 
   digitalWrite(11, HIGH);
   digitalWrite(10, HIGH); 
